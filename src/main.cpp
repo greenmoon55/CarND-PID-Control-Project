@@ -34,7 +34,7 @@ int main()
 
   PID pid;
   // TODO: Initialize the pid variable.
-  double Kp_init = -0.3, Ki_init = -0.001, Kd_init = -0.01;
+  double Kp_init = -0.3, Ki_init = -0.003, Kd_init = -0.009;
   pid.Init(Kp_init, Ki_init, Kd_init);
 
   double previous_time = clock();

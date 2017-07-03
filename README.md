@@ -3,6 +3,27 @@ Self-Driving Car Engineer Nanodegree Program
 
 ---
 
+## Describe the effect each of the P, I, D components had in your implementation.
+
+P term is porportional to the distance to the center line. A large P
+may cause the car to steer to the center quickly but too unstable.
+A small P may make the car too inresponsive.
+
+I term is porpotional to the error integal to combat systematic error
+which is not present in the simulator.
+
+D term is porportional to the derivative of P term to avoid oscillation
+as much as possible. A large D term makes the car "stick" to the center
+line but the steer value changes abruptly.
+
+## Describe how the final hyperparameters were chosen.
+
+I set the car to a fixed speed. Then I tuned the hyperparameters
+manually. First I tweak the P term to make sure the car doesn't drive
+off the track. Then I tweak the D term and I term to make it drive
+nicer.
+
+
 ## Dependencies
 
 * cmake >= 3.5
